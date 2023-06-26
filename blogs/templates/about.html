@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <!-- Title -->
+    <title>DreamJob360</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-lYbggmh1zbIXKuPSdGVcMpK1TZJ2ld5Wq+7gId7gTw8PkJMTTZ8UeK6ri+QglrmC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-N8SYmW/XYVJGnVY+OncrRlt4J8Sg3tNUUgOWqCjHkDd/xDf2hULGpRBlw4EB+Wh9n0g+q66Y7FXcBzZzQbOgyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+
+
+<body class="light-version">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preload-content">
+            <div id="dream-load"></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <!-- ##### Header Area Start ##### -->
+    
+    {% load static %}
+    <header class="header-area">
+        <div class="classy-nav-container dark breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="dreamNav">
+    
+                    <!-- Logo -->
+                    <a class="nav-brand" href="{% url 'home' %}">
+                        <img src="{% static  'img/core-img/logo.png' %}" alt="logo">DreamJob360
+                    </a>
+    
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+    
+                    <!-- Menu -->
+                        <div class="classy-menu">
+    
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap">
+                                    <span class="top"></span>
+                                    <span class="bottom"></span>
+                                </div>
+                            </div>
+    
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li><a href="{% url 'demo_templates' %}">Create Resume</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    <li><a href="{% url 'latest_jobs' %}">Latest Jobs</a></li>
+                                </ul>
+    
+                                
+                                <div class="row justify-content-center">
+                                        <div class="col-12 col-lg-12">
+                                            <form class="subscribe-form" method="GET" action="{% url 'search' %}">
+                                                        <input type="text" name="keywords" class="form-control" id="searchKeywords" placeholder="Enter keywords">
+                                                        {% comment %} <button type="submit" class="btn btn-primary">Search</button> {% endcomment %}
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                            </div>
+                        </div>
+                    <!-- Nav End -->
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+
+    <div class="breadcumb-area clearfix">
+        <!-- breadcumb content -->
+        <div class="breadcumb-content">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb" class="breadcumb--con text-center">
+                            <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">About Us</h2>
+                            <ol class="breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ##### Welcome Area End ##### -->
+
+
+ <!-- ##### About Area Start ##### -->
+ <section class="contact-area section-padding-100 bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <div class="line-"></div>
+                    <h2>About Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
+                        explicabo inventore quia quidem nemo ipsum. Quisquam necessitatibus incidunt ut officiis explicabo
+                        inventore quia quidem nemo ipsum.</p>
+                </div>
+            </div>
+        </div>
+            <div class="col-12 col-md-6">
+                <div class="about-thumbnail mb-100">
+                    <img src="{% static 'img/bg-img/about.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ##### About Area End ##### -->
+
+
+<!-- ##### Contact Area Start ##### -->
+{% comment %} <section class="contact-area section-padding-100 bg-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <div class="line-"></div>
+                    <h2>Contact Us</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam necessitatibus incidunt ut officiis
+                        explicabo inventore quia quidem nemo ipsum. Quisquam necessitatibus incidunt ut officiis explicabo
+                        inventore quia quidem nemo ipsum.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-between">
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-contact-info mb-100">
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <p>Phone: <br> +123 456 7890</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-contact-info mb-100">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <p>Email: <br> info@example.com</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-4">
+                <div class="single-contact-info mb-100">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <p>Location: <br> 1234 Street Name, City, Country</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> {% endcomment %}
+<!-- ##### Contact Area End ##### -->
+
+
+
+
+
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer-area bg-img">
+
+    <div class="footer-content-area spec">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 col-lg-4 col-md-6">
+                    <div class="footer-copywrite-info">
+                        <!-- Copywrite -->
+                        <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
+                            <div class="footer-logo">
+                                <a href="#"><img src="{% static 'img/core-img/logo.png' %}" alt="logo">DreamJob360 </a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ducimus voluptatibus neque illo id repellat quisquam? Autem expedita earum quae laborum ipsum ad.</p>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3 col-md-6">
+                   
+
+                <div class="col-12 col-lg-3 col-md-6 ">
+                    <div class="contact_info_area d-sm-flex justify-content-between">
+                        <!-- Content Info -->
+                        <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
+                            <h5>CONTACT US</h5>
+                            <p></p>
+                            <p></p>
+                            <p>+918800986068</p>
+                            <p>shreysingla456@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<!-- Rest of the content -->
+
+
+    <!-- ########## All JS ########## -->
+    <!-- Rest of the content -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- Popper js --> 
+    <script src="{% static 'js/popper.min.js '%}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{%static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <!-- Parallax js -->
+    <script src="{% static 'js/dzsparallaxer.js' %}"></script>
+
+    <script src="{% static 'js/jquery.syotimer.min.js'%}"></script>
+
+    <!-- script js -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>

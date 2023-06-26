@@ -1,0 +1,137 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 card mb-4  mt-3 left  top">
+      <div class="card-body">
+        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+        <p class="card-text ">{{ object.content | safe }}</p>
+        <br><br>
+        <a href="{{ post.link }}" class="btn btn-primary" style="position: absolute;bottom: 20px;"  target="_blank">Read More &rarr;</a>
+
+      </div>
+    </div>
+    {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+  </div>
+</div>
+
+{% endblock content %}
+
+
+<section class="subscribe-area section-padding-100">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12 col-lg-6">
+              <div class="subscribe-content text-center">
+                  <h2>Subscribe to Our Newsletter</h2>
+                  <p>Subscribe to our newsletter and get updates on the latest news and blog posts.</p>
+                  <form class="subscribe-form" method="post" action="{% url 'home' %}">
+                      {% csrf_token %}
+                      <input type="email" name="email" class="form-control" id="subscribeEmail" placeholder="Your Email">
+                      <button type="submit" class="btn btn-primary">Subscribe</button>
+
+
+
+                       {% if messages %}
+                      <ul class="messages">
+                          {% for message in messages %}
+                          <h6> <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li></h2>
+                          {% endfor %}
+                      </ul>
+                      {% endif %} 
+
+                        
+                      {% comment %} {% if messages %}
+                      <script>
+                        {% for message in messages %}
+                          alert('{{ message }}');
+                        {% endfor %}
+                      </script>
+                    {% endif %} {% endcomment %}
+
+
+
+
+
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- ##### Subscribe Area End ##### -->
+
+
+  <!-- ##### Footer Area Start ##### -->
+  <footer class="footer-area bg-img">
+
+      <div class="footer-content-area spec">
+          <div class="container">
+              <div class="row ">
+                  <div class="col-12 col-lg-4 col-md-6">
+                      <div class="footer-copywrite-info">
+                          <!-- Copywrite -->
+                          <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
+                              <div class="footer-logo">
+                                  <a href="#"><img src="{% static 'img/core-img/logo.png' %}" alt="logo">DreamJob360 </a>
+                              </div>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ducimus voluptatibus neque illo id repellat quisquam? Autem expedita earum quae laborum ipsum ad.</p>
+                          </div>
+                         
+                      </div>
+                  </div>
+
+                  <div class="col-12 col-lg-3 col-md-6">
+                     
+
+                  <div class="col-12 col-lg-3 col-md-6 ">
+                      <div class="contact_info_area d-sm-flex justify-content-between">
+                          <!-- Content Info -->
+                          <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
+                              <h5>CONTACT US</h5>
+                              <p></p>
+                              <p></p>
+                              <p>+918800986068</p>
+                              <p>shreysingla456@gmail.com</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </footer>
+  <!-- ##### Footer Area End ##### -->
+
+  <!-- ########## All JS ########## -->
+  <!-- jQuery js -->
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <!-- Popper js --> 
+  <script src="{% static 'js/popper.min.js '%}"></script>
+  <!-- Bootstrap js -->
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <!-- All Plugins js -->
+  <script src="{%static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/particles.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+  <!-- Parallax js -->
+  <script src="{% static 'js/dzsparallaxer.js' %}"></script>
+
+  <script src="{% static 'js/jquery.syotimer.min.js'%}"></script>
+
+  <!-- script js -->
+  <script src="{% static 'js/script.js' %}"></script>
+   
+</body>
+
+</html>

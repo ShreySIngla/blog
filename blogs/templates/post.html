@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    
+    <!-- Title -->
+    <title>DreamJob360</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/core-img/favicon.ico' %}">
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <!-- Responsive Stylesheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-lYbggmh1zbIXKuPSdGVcMpK1TZJ2ld5Wq+7gId7gTw8PkJMTTZ8UeK6ri+QglrmC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-N8SYmW/XYVJGnVY+OncrRlt4J8Sg3tNUUgOWqCjHkDd/xDf2hULGpRBlw4EB+Wh9n0g+q66Y7FXcBzZzQbOgyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+
+
+<body class="light-version">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preload-content">
+            <div id="dream-load"></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <!-- ##### Header Area Start ##### -->
+    
+    {% load static %}
+    <header class="header-area">
+        <div class="classy-nav-container dark breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="dreamNav">
+    
+                    <!-- Logo -->
+                    <a class="nav-brand" href="{% url 'home' %}">
+                        <img src="{% static  'img/core-img/logo.png' %}" alt="logo">DreamJob360
+                    </a>
+    
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+    
+                    <!-- Menu -->
+                        <div class="classy-menu">
+    
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap">
+                                    <span class="top"></span>
+                                    <span class="bottom"></span>
+                                </div>
+                            </div>
+    
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul id="nav">
+                                    <li><a href="{% url 'demo_templates' %}">Create Resume</a></li>
+                                    <li><a href="{% url 'about' %}">About Us</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    <li><a href="{% url 'latest_jobs' %}">Latest Jobs</a></li>
+                                </ul>
+    
+                                
+                                <div class="row justify-content-center">
+                                        <div class="col-12 col-lg-12">
+                                            <form class="subscribe-form" method="GET" action="{% url 'search' %}">
+                                                        <input type="text" name="keywords" class="form-control" id="searchKeywords" placeholder="Enter keywords">
+                                                        {% comment %} <button type="submit" class="btn btn-primary">Search</button> {% endcomment %}
+                                                    </form>
+                                                </div>
+                                            </div>
+                                <!-- Search Bar -->
+                                {% comment %} <div class="search">
+                                    <form action="{% url 'about' %}" method="get">
+                                        <div class="search-input-wrapper">
+                                            <input type="text" class="form-control" placeholder="Search Jobs....">
+                                        </div>
+                                    </form>
+                                </div> {% endcomment %}
+                            </div>
+                        </div>
+                    <!-- Nav End -->
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    {% comment %} <!-- ##### Welcome Area Start ##### -->
+    <section class="welcome_area demo2 flex align-items-center">
+
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Welcome Content -->
+                <div class="col-12 col-lg-6 col-md-12">
+                    <div class="welcome-content v2">
+                        <div class="promo-section">
+                            <div class="integration-link light">
+                                <span class="integration-icon">
+                                    <img src="{% static 'img/svg/img-dollar.svg' %}" width="24" height="24" alt="">
+                                </span>
+                                <span class="integration-text">Discover The Easiest ways to Build Your CV!</span>
+                            </div>
+                        </div>
+                        <h1 class="wow fadeInUp" data-wow-delay="0.2s">OnlineDreamJob360 With Creative Templates.</h1>
+                        <p class="wow fadeInUp" data-wow-delay="0.3s">Our Perfect resume builder takes the hassle out of resume writing. Choose from several templates and follow easy prompts to create the perfect job-ready resume.</p>
+                        <div class="dream-btn-group wow fadeInUp" data-wow-delay="0.4s">
+                            <a href="{% url 'home' %}" class="btn dream-btn green-btn mr-3">Create Resume</a>
+                            <a href="{% url 'home' %}" class="btn dream-btn green-btn">Find Jobs</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 col-md-12">
+                    <div class="banner-box">
+                        <img src="{% static 'img/core-img/banner.png' %}" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <!-- ##### Welcome Area End ##### -->
+    <!-- ##### Welcome Area End ##### -->
+
+
+    <div class="breadcumb-area clearfix">
+        <!-- breadcumb content -->
+        <div class="breadcumb-content">
+            <div class="container h-100">
+                <div class="row h-100 align-items-center">
+                    <div class="col-12">
+                        <nav aria-label="breadcrumb" class="breadcumb--con text-center">
+                            <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">Job Details</h2>
+                            <ol class="breadcrumb justify-content-center wow fadeInUp" data-wow-delay="0.4s">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Job Details</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<!-- ##### Welcome Area End ##### -->
+
+
+    <div class="container">
+        <div class="row">
+            {% comment %} <div class="col-md-12 mt-3 left"> {% endcomment %}
+          <div class="col-md-8 card mb-4  mt-3 left  top">
+            <div class="card-body">
+              <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+              <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
+              <p class="card-text ">{{ object.content | safe }}</p>
+              <br><br>
+    
+              <a href="{{ post.link }}" class="btn btn-primary" style="display: block;align-content: center;align-items: center;text-align: center;margin-left: auto;margin-right: auto;"  target="_blank">Apply Now</a>
+              <br><br>
+            </div>
+          </div>
+          {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %}
+        </div>
+      </div>
+
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer-area bg-img">
+
+    <div class="footer-content-area spec">
+        <div class="container">
+            <div class="row ">
+                <div class="col-12 col-lg-4 col-md-6">
+                    <div class="footer-copywrite-info">
+                        <!-- Copywrite -->
+                        <div class="copywrite_text fadeInUp" data-wow-delay="0.2s">
+                            <div class="footer-logo">
+                                <a href="#"><img src="{% static 'img/core-img/logo.png' %}" alt="logo">DreamJob360 </a>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit ducimus voluptatibus neque illo id repellat quisquam? Autem expedita earum quae laborum ipsum ad.</p>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-3 col-md-6">
+                   
+
+                <div class="col-12 col-lg-3 col-md-6 ">
+                    <div class="contact_info_area d-sm-flex justify-content-between">
+                        <!-- Content Info -->
+                        <div class="contact_info mt-s text-center fadeInUp" data-wow-delay="0.4s">
+                            <h5>CONTACT US</h5>
+                            <p></p>
+                            <p></p>
+                            <p>+918800986068</p>
+                            <p>shreysingla456@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<!-- Rest of the content -->
+
+
+    <!-- ########## All JS ########## -->
+    <!-- Rest of the content -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <!-- Popper js --> 
+    <script src="{% static 'js/popper.min.js '%}"></script>
+    <!-- Bootstrap js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- All Plugins js -->
+    <script src="{%static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <!-- Parallax js -->
+    <script src="{% static 'js/dzsparallaxer.js' %}"></script>
+
+    <script src="{% static 'js/jquery.syotimer.min.js'%}"></script>
+
+    <!-- script js -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
